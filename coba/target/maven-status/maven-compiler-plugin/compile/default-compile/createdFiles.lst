@@ -1,2 +1,4 @@
+com/mycompany/coba/db_connect.class
 com/mycompany/coba/MainApp.class
-com/mycompany/coba/FXMLController.class
+com/mycompany/coba/SceneController.class
+com/mycompany/coba/SignupController.class
