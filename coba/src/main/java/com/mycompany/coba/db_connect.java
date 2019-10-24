@@ -21,7 +21,7 @@ public class db_connect {
        
         try {
             // db parameters
-            String url = "jdbc:sqlite:database /root/NetBeansProjects/coba/databaase.db";
+            String url = "jdbc:sqlite:databaase.db";
             // create a connection to the database
             conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
@@ -37,6 +37,7 @@ public class db_connect {
             }else{
                 System.out.println("tidak ada");
             }
+          
             conn.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -54,5 +55,9 @@ public class db_connect {
     public void userQuery(String username, String password) throws SQLException{
 //        connect();
         
+    }
+
+    Connection connect() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
