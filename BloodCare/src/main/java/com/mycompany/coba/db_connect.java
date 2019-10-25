@@ -10,6 +10,18 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import java.sql.*;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 /**
  *
  * @author root
@@ -33,6 +45,9 @@ public class db_connect {
             ResultSet rs = stmt.executeQuery(query);
             System.out.println("3");
             if(rs.next()) {
+                
+                
+                
                 System.out.println("ada");
             }else{
                 System.out.println("tidak ada");

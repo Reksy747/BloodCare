@@ -37,11 +37,15 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button layoutX="123.0" layoutY="320.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="224.0" style="-fx-background-color: red; -fx-text-fill: white;" styleClass="button_login" text="Login" />
+                        <Button layoutX="123.0" layoutY="320.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: red; -fx-text-fill: white;" styleClass="button_login" text="Daftar">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
                         <PasswordField fx:id="pass" layoutX="123.0" layoutY="231.0" prefHeight="26.0" prefWidth="224.0" promptText="Password" styleClass="input" />
                         <TextField fx:id="user" layoutX="123.0" layoutY="189.0" prefHeight="26.0" prefWidth="224.0" promptText="Username" styleClass="input" />
                         <TextField layoutX="123.0" layoutY="154.0" prefHeight="26.0" prefWidth="224.0" promptText="Nama" styleClass="input" />
-                        <DatePicker layoutX="123.0" layoutY="267.0" prefHeight="26.0" prefWidth="224.0" styleClass="input" />
+                        <DatePicker layoutX="123.0" layoutY="267.0" prefHeight="26.0" prefWidth="224.0" promptText="Tanggal Lahir" styleClass="input" />
+                        <Button layoutX="260.0" layoutY="320.0" mnemonicParsing="false" onAction="#kembali_index" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: lightgrey;" text="Kembali" />
                      </children>
                   </AnchorPane>
                   <VBox layoutX="188.0" layoutY="24.0">

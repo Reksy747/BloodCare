@@ -1,4 +1,5 @@
 com/mycompany/coba/db_connect.class
 com/mycompany/coba/MainApp.class
 com/mycompany/coba/SceneController.class
+com/mycompany/coba/DasboardController.class
 com/mycompany/coba/SignupController.class

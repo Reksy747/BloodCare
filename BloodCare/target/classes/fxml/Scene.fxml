@@ -27,16 +27,21 @@
                <children>
                   <AnchorPane layoutX="166.0" layoutY="112.0" prefHeight="342.0" prefWidth="469.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="112.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="185.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="193.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@user.png" />
                            </image>
                         </ImageView>
+                        <Label layoutX="204.0" layoutY="94.0" text="Sign In">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
                         <Button layoutX="123.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="224.0" style="-fx-background-color: red; -fx-text-fill: white;" styleClass="button_login" text="Login" />
                         <PasswordField fx:id="pass" layoutX="123.0" layoutY="179.0" prefHeight="26.0" prefWidth="224.0" promptText="Password" styleClass="input" />
                         <TextField fx:id="user" layoutX="121.0" layoutY="127.0" prefHeight="26.0" prefWidth="224.0" promptText="Username" styleClass="input" />
                         <Label layoutX="101.0" layoutY="296.0" text="Belum Mempinyai akun?" />
-                        <Hyperlink layoutX="270.0" layoutY="292.0" text="Daftar Disini" />
+                        <Hyperlink layoutX="270.0" layoutY="292.0" onAction="#Daftar" text="Daftar Disini" />
                      </children>
                   </AnchorPane>
                   <VBox layoutX="188.0" layoutY="24.0">
