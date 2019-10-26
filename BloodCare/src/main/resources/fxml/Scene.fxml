@@ -41,7 +41,7 @@
                         <PasswordField fx:id="pass" layoutX="123.0" layoutY="179.0" prefHeight="26.0" prefWidth="224.0" promptText="Password" styleClass="input" />
                         <TextField fx:id="user" layoutX="121.0" layoutY="127.0" prefHeight="26.0" prefWidth="224.0" promptText="Username" styleClass="input" />
                         <Label layoutX="101.0" layoutY="296.0" text="Belum Mempinyai akun?" />
-                        <Hyperlink layoutX="270.0" layoutY="292.0" onAction="#Daftar" text="Daftar Disini" />
+                        <Hyperlink layoutX="270.0" layoutY="292.0" onAction="#Daftar_baru"  text="Daftar Disini" />
                      </children>
                   </AnchorPane>
                   <VBox layoutX="188.0" layoutY="24.0">

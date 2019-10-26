@@ -45,6 +45,7 @@ public class SceneController implements Initializable {
     private TextArea isi;
     */
      private  Connection conn = null;
+   
     @FXML
     private void loginButton(ActionEvent event) throws SQLException, IOException{
         System.out.println("masuk");
@@ -95,7 +96,7 @@ String url = "jdbc:sqlite:databaase.db";
     
 
     @FXML
-    private void Daftar(ActionEvent event) throws IOException{
+    private void Daftar_baru(ActionEvent event) throws IOException{
         Parent root=FXMLLoader.load(getClass().getResource("/fxml/signup.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Style.css");
