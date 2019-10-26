@@ -2,6 +2,28 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
+.btn-daftar {
+    -fx-font-weight: bold;
+}
 
+.input{
+   -fx-padding: 1 1 1 1;
+   -fx-border-bottom: solid 1px #f50000;
+   -fx-background-color: #f50000;
+   -fx-background-color: -fx-text-box-border, -fx-background;
+   -fx-background-insets: 0, 0 0 1 0 ;
+}
+
+.input:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+.btn-daftar{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+.btn-daftar:hover{
+    -fx-background-color: white;
+    -fx-text-fill: red;
+    -fx-border-color: red;
 }
