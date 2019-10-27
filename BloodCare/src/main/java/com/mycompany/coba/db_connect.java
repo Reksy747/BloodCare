@@ -37,13 +37,13 @@ public class db_connect {
             // create a connection to the database
             conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
-            System.out.println(username);
-            System.out.println(password);
+          //  System.out.println(username);
+          //  System.out.println(password);
             String query= "SELECT * FROM user WHERE username = '"+username+"' and password='"+password+"'";
-            System.out.println(query);
+           // System.out.println(query);
 
             ResultSet rs = stmt.executeQuery(query);
-            System.out.println("3");
+          //  System.out.println("3");
             if(rs.next()) {
                 
                 

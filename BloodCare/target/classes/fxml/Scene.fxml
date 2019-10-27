@@ -37,11 +37,11 @@
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Button layoutX="123.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="224.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Login" />
+                        <Button layoutX="123.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="224.0" styleClass="btn-login" text="Login" />
                         <PasswordField fx:id="pass" layoutX="123.0" layoutY="179.0" prefHeight="26.0" prefWidth="224.0" promptText="Password" styleClass="input" />
                         <TextField fx:id="user" layoutX="121.0" layoutY="127.0" prefHeight="26.0" prefWidth="224.0" promptText="Username" styleClass="input" />
                         <Label layoutX="101.0" layoutY="296.0" text="Belum Mempinyai akun?" />
-                        <Hyperlink layoutX="270.0" layoutY="292.0" onAction="#Daftar_baru"  text="Daftar Disini" />
+                        <Hyperlink layoutX="270.0" layoutY="292.0" onAction="#Daftar_baru" text="Daftar Disini" />
                      </children>
                   </AnchorPane>
                   <VBox layoutX="188.0" layoutY="24.0">

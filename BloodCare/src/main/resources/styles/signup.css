@@ -27,3 +27,13 @@
     -fx-text-fill: red;
     -fx-border-color: red;
 }
+.btn-kembali{
+    -fx-background-color: grey;
+    -fx-text-fill: white;
+}
+
+.btn-kembali:hover{
+    -fx-background-color: white;
+    -fx-text-fill: grey;
+    -fx-border-color: grey;
+}
