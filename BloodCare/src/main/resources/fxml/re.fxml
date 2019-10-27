@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.mycompany.coba.ReController">
+  <children>
+    <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <BorderPane layoutX="10.0" layoutY="0.0" prefHeight="200.0" prefWidth="200.0" />
+        <AnchorPane layoutX="0.0" layoutY="0.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="173.0" style="-fx-background-color:red;">
+          <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="109.0" text="BloodCare" textAlignment="CENTER" textFill="BLACK">
+              <font>
+                <Font size="18.0" />
+              </font>
+            </Label>
+            <TextArea layoutX="8.0" layoutY="121.0" prefHeight="35.0" prefWidth="100.0" promptText="Tekanan darah" wrapText="true" />
+            <Text layoutX="112.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mg/mmol" />
+            <Button layoutX="8.0" layoutY="167.0" mnemonicParsing="false" onAction="#TekananDarahButton" prefHeight="22.0" prefWidth="69.0" style="-fx-background-color: white" text="Cek" textAlignment="CENTER" textFill="BLACK" />
+          </children>
+        </AnchorPane>
+        <Text layoutX="244.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rekomendasi Makanan">
+          <font>
+            <Font name="Bauhaus 93" size="26.0" />
+          </font>
+        </Text>
+      </children>
+    </AnchorPane>
+    <ScrollPane content="$null" layoutX="173.0" layoutY="69.0" prefHeight="332.400390625" prefWidth="427.0" />
+  </children>
+</AnchorPane>

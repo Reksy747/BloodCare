@@ -68,7 +68,8 @@ String url = "jdbc:sqlite:databaase.db";
             
                 System.out.println("ada");
       
-        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Dasboard.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
+      
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
