@@ -81,7 +81,9 @@ public class ReController implements Initializable {
 "14. Tumbuhan khas Korea yang satu ini juga termasuk salah satu makanan untuk darah rendah yang dianjurkan. Sejak dulu ginseng sudah sering digunakan untuk mengatasi tekanan darah yang tidak stabil, termasuk mengatasi tekanan darah rendah.");
         }
         else if(a >= 80 && a<140 ){
-            lbl_label.setText("Darah Anda sedang dalam kondisi normal. Untuk menjaga kestabilan darah Anda, kami menyarankan untuk mengkonsumsi makanan dan minuman sebagai berikut:\n" +
+            lbl_label.setText("Darah Anda sedang dalam kondisi normal."
+ + ""
+ + " Untuk menjaga kestabilan darah Anda, kami menyarankan untuk mengkonsumsi makanan dan minuman sebagai berikut:\n" +
 "1. Jus juga minim protein dan lemak, sehingga tubuh akan mencernanya dengan cepat. Jus hijau pun bisa menimbulkan masalah gula darah, terutama jika jus tersebut dibuat dari berbagai campuran buah yang manis. Untuk menyeimbangkannya, kamu bisa mengkonsumsi jus bersama kacang-kacang atau telur. Jika tak punya bnyak waktu, cobalah bereksperimen dengan bubuk protein.\n" +
 "2. Buah kering kaya akan serat serta sumber vitamin dan mineral. Namun, makanan ini bisa meningkatkan gula darah sangat cepat jika kita tidak cermat memerhatikan porsinya.\n" +
 "3. Biji-bijian utuh sangatlah bernutrisi ketimbang makanan yang disuling. Namun, pastikan kita memerhatikan porsinya secara tepat. Jangan lupa pula menyandingkannya dengan sumber protein dan lemak. Kamu bisa menambahkan alpukat, selai kacang atau keju.\n" +
@@ -90,7 +92,9 @@ public class ReController implements Initializable {
 "6. Buah adalah makanan sehat. Begitu pula oatmeal. Kombinasi keduanya dianggap akan menghasilkan makanan yang sangat sehat. Buah-buahan dan oatmeal mengandung karbohidrat tinggi sehingga sulit membuat kita tetap berenergi dan kenyang lebih lama. Cobalah tambahkan selai kacang di atasnya untuk menambahkan protein dan perhatikan porsinya agar tidak mengalami lonjakan gila darah.");
         }
         else{
-            lbl_label.setText("Tekanan Darah saat ini sudah melebihi batas normal. Untuk itu sangat disarankan untuk mengkonsumsi makanan dan minuman sebagai berikut:\n" +
+            lbl_label.setText("Tekanan Darah saat ini sudah melebihi batas normal. "
+ + ""
+ + "Untuk itu sangat disarankan untuk mengkonsumsi makanan dan minuman sebagai berikut:\n" +
 "1. Dalam buah pisan mengandungan kalium yang tinggi yang dapat membantu menyeimbangkan kadar natrium yang tinggi dalam tubuh para penderita hipertensi, sehingga dapat membantu Anda dalam menurunkan tekanan darah. Anda dapat mengonsumsi pisang secara langsung atau juga sebagai teman untuk makan sereal atau yogurt.\n" +
 "2. Sayuran hijau seperti bayam, kale, lobat hijau, sawi, dan lainnya juga mengandung kalium tinggi. Terlebih lagi, sayuran hijau juga mengandung kalsium yang juga berguna sebagai makanan penurun darah tinggi. Setengah cangkir bayam matang mampu memberikan 12% dari kebutuhan kalsium harian orang dewasa.\n" +
 "\n" +
