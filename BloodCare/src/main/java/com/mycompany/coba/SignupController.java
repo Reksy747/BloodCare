@@ -84,15 +84,20 @@ String url = "jdbc:sqlite:databaase.db";
             String query= "INSERT INTO user VALUES ('"+username_daftar+"','"+password_daftar+"','"+date+"','"+gender+"')";
             System.out.println(query);
 
-            ResultSet rs = stmt.executeQuery(query);
+            int rs = stmt.executeUpdate(query);
+            
             System.out.println("ok");
-            if(rs.next()) {
+            
+            if(rs==1) {
             
                 System.out.println("data masuk");
-      JOptionPane.showMessageDialog(null,"Data Telah terupdate! ");
-        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Style.css");
+        
+              JOptionPane.showMessageDialog(null,"Data Telah terupdate! ");
+        
+              Parent root=FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+              Scene scene = new Scene(root);
+              scene.getStylesheets().add("/styles/Styles.css");
+       // scene.getStylesheets().add("/styles/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
@@ -118,7 +123,8 @@ String url = "jdbc:sqlite:databaase.db";
     private void kembali_index(ActionEvent event) throws IOException{
         Parent root=FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Style.css");
+        scene.getStylesheets().add("/styles/Styles.css");
+        //scene.getStylesheets().add("/styles/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();

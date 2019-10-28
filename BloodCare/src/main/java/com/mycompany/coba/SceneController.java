@@ -68,10 +68,10 @@ String url = "jdbc:sqlite:databaase.db";
             
                 System.out.println("ada");
       
-        Parent root=FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
-      
+        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Dasboard.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Style.css");
+        scene.getStylesheets().add("/styles/Styles.css");
+        //scene.getStylesheets().add("/styles/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
@@ -100,7 +100,8 @@ String url = "jdbc:sqlite:databaase.db";
     private void Daftar_baru(ActionEvent event) throws IOException{
         Parent root=FXMLLoader.load(getClass().getResource("/fxml/signup.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Style.css");
+        scene.getStylesheets().add("/styles/signup.css");
+       // scene.getStylesheets().add("/styles/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
