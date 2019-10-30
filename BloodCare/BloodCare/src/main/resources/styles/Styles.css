@@ -1,0 +1,42 @@
+.button {
+    -fx-font-weight: bold;
+}
+
+.input{
+    -fx-padding: 1 1 1 1;
+    -fx-border-bottom: solid 1px #f50000;
+    -fx-background-color: #f50000;
+    -fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0 ;
+}
+
+.input:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+.btn-login{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+.btn-login:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #f50000;
+    -fx-border-color: #f50000;
+}
+
+/*DASBOARD*/
+.button-sidebar{
+
+    -fx-background-color: crimson;
+    -fx-text-fill: white;
+}
+
+.button-sidebar:hover{
+    -fx-background-color: #fff;
+    -fx-text-fill: crimson;
+}
+
+#button-id{
+    -fx-border-color #fff;
+}
+
