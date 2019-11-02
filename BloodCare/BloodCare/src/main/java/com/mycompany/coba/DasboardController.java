@@ -25,6 +25,16 @@ import javafx.stage.Stage;
 public class DasboardController implements Initializable {
 
     @FXML
+    private void profil (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/profil_user.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+            
+    @FXML
     private void re(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
         Scene scene = new Scene(root);

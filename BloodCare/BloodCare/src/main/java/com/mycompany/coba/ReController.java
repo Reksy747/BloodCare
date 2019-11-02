@@ -106,16 +106,25 @@ public class ReController implements Initializable {
                     + "10. Tentu Anda tidak menyangka jika cokelat dapat menurunkan tekanan darah. Mengonsumsi cokelat yang kaya akan flavonoid (biasa ditemukan pada dark chocolate) ternyata dapat membantu Anda dalam penurunan tekanan darah tinggi. ");
         }
     }
-
-    @FXML
-    private void re(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
+      @FXML
+    private void profil(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/profil_user.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
     }
+
+//    @FXML
+//    private void re(ActionEvent event) throws IOException {
+//        Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
+//        Scene scene = new Scene(root);
+//        scene.getStylesheets().add("/styles/Styles.css");
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        window.setScene(scene);
+//        window.show();
+//    }
 
     @FXML
     private void keluar(ActionEvent event) throws IOException {

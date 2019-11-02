@@ -31,8 +31,8 @@
                   <Button layoutY="461.0" mnemonicParsing="false" onAction="#keluar" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="LOGOUT" textFill="#f2f2f2" />
                   <Button layoutY="157.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK GULA DARAH" textFill="WHITE" />
                   <Button layoutY="216.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK TEKANAN DARAH" textFill="WHITE" />
-                  <Button layoutY="275.0" mnemonicParsing="false" onAction="#re" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="Rekomendasi" textFill="WHITE" />
-                  <Button layoutY="334.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="My Profil" textFill="WHITE" />
+                  <Button layoutY="275.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="Rekomendasi" textFill="WHITE" />
+                  <Button layoutY="334.0" mnemonicParsing="false" onAction="#profil" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="My Profil" textFill="WHITE" />
                </children>
             </Pane>
       <Text layoutX="224.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mg/mmol" />
@@ -41,7 +41,7 @@
             <Font name="Bauhaus 93" size="26.0" />
           </font>
         </Text>
-      <Button layoutX="490.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#test" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: Red;" text="Cek" textAlignment="CENTER" textFill="BLACK" />
+      <Button layoutX="490.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#test" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: Red; -fx-text-fill: white;" text="Cek" textAlignment="CENTER" textFill="BLACK" />
           <ScrollPane layoutX="200.0" layoutY="217.0" prefHeight="333.0" prefWidth="599.0">
                <content>
               <Label fx:id="lbl_label" prefHeight="590.0" prefWidth="581.0" text="" textOverrun="WORD_ELLIPSIS" wrapText="true" />

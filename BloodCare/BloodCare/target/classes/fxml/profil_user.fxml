@@ -23,25 +23,25 @@
                   <Label layoutX="107.0" layoutY="29.0" style="-fx-font-family: 'Roboto', sans-serif; -fx-font-weight: bold;" text="B L O O D C A R E" textFill="WHITE" />
                </children>
             </Pane>
-            <Label layoutX="22.0" layoutY="169.0" prefHeight="16.0" prefWidth="77.0" text="Username">
+            <Label layoutX="22.0" layoutY="169.0" prefHeight="16.0" prefWidth="113.0" styleClass="profil_isi" text="Username:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="username" layoutX="22.0" layoutY="191.0" prefHeight="16.0" prefWidth="156.0" />
-            <Label layoutX="22.0" layoutY="220.0" prefHeight="16.0" prefWidth="137.0" text="Golongan Darah">
+            <Label fx:id="username" layoutX="22.0" layoutY="191.0" prefHeight="16.0" prefWidth="156.0" styleClass="profil_isi" />
+            <Label layoutX="22.0" layoutY="220.0" prefHeight="16.0" prefWidth="137.0" styleClass="profil_isi" text="Golongan Darah:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="gol_darah" layoutX="22.0" layoutY="246.0" prefHeight="16.0" prefWidth="156.0" />
-            <Label layoutX="21.0" layoutY="275.0" prefHeight="16.0" prefWidth="126.0" text="Password">
+            <Label fx:id="gol_darah" layoutX="22.0" layoutY="246.0" prefHeight="16.0" prefWidth="156.0" styleClass="profil_isi" />
+            <Label layoutX="21.0" layoutY="275.0" prefHeight="16.0" prefWidth="126.0" styleClass="profil_isi" text="Password:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="password" layoutX="21.0" layoutY="301.0" prefHeight="16.0" prefWidth="156.0" />
-            <Label layoutX="128.0" layoutY="105.0" text="MY PROFIL">
+            <Label fx:id="password" layoutX="21.0" layoutY="301.0" prefHeight="16.0" prefWidth="156.0" styleClass="profil_isi" />
+            <Label layoutX="128.0" layoutY="105.0" styleClass="profil_isi" text="MY PROFIL">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -57,9 +57,9 @@
       <TextField fx:id="gol_dar" layoutX="534.0" layoutY="214.0" prefHeight="26.0" prefWidth="209.0" promptText="Golongan Darah" />
       <TextField fx:id="pass" layoutX="534.0" layoutY="249.0" prefHeight="26.0" prefWidth="209.0" promptText="Password" />
       <TextField fx:id="konfirmasi_pass" layoutX="534.0" layoutY="286.0" prefHeight="26.0" prefWidth="209.0" promptText="Konfirmasi Password" />
-      <Button layoutX="414.0" layoutY="342.0" mnemonicParsing="false" onAction="#hapus_profil" text="HAPUS PROFIL" />
+      <Button layoutX="401.0" layoutY="342.0" mnemonicParsing="false" text="HAPUS PROFIL" />
       <Button fx:id="edit_profil" layoutX="541.0" layoutY="342.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="EDIT PROFIL" />
       <Button fx:id="logout" layoutX="669.0" layoutY="342.0" mnemonicParsing="false" text="LOGOUT" />
-      <Button fx:id="kembali" layoutX="758.0" layoutY="342.0" mnemonicParsing="false" text="KEMBALI" />
+      <Button layoutX="758.0" layoutY="342.0" mnemonicParsing="false" onAction="#kembali" text="KEMBALI" />
    </children>
 </AnchorPane>

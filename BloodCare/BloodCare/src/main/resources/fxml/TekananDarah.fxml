@@ -33,29 +33,24 @@
                   <Button layoutY="334.0" mnemonicParsing="false" onAction="#re" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="My Profil" textFill="WHITE" />
                </children>
             </Pane>
-        <AnchorPane layoutX="271.0" layoutY="129.0" prefHeight="376.0" prefWidth="469.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+        <AnchorPane layoutX="252.0" layoutY="107.0" prefHeight="422.0" prefWidth="530.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
           <children>
-            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="193.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                <Image url="@user.png" />
-              </image>
-            </ImageView>
-            <Label layoutX="175.0" layoutY="94.0" text="Tekanan Darah">
+            <Label layoutX="193.0" layoutY="14.0" text="Tekanan Darah">
               <font>
-                <Font size="17.0" />
+                <Font name="System Bold" size="17.0" />
               </font>
             </Label>
-            <Button fx:id="btnLogin" layoutX="97.0" layoutY="248.0" mnemonicParsing="false" onAction="okeee" prefHeight="26.0" prefWidth="256.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Ok" />
-            <Label layoutX="97.0" layoutY="135.0" text="SYS(mmHg)">
+            <Button fx:id="btnLogin" layoutX="137.0" layoutY="162.0" mnemonicParsing="false" onAction="okeee" prefHeight="26.0" prefWidth="256.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Ok" />
+            <Label layoutX="137.0" layoutY="49.0" text="SYS(mmHg)">
               <font>
                 <Font name="System Bold" size="18.0" fx:id="x1" />
               </font>
             </Label>
-            <TextField layoutX="223.0" layoutY="138.0" prefHeight="21.0" prefWidth="130.0" />
-            <Label font="$x1" layoutX="97.0" layoutY="171.0" text="DIA(mmHg)" />
-            <TextField layoutX="223.0" layoutY="173.0" prefHeight="21.0" prefWidth="130.0" />
-            <Label font="$x1" layoutX="97.0" layoutY="206.0" text="PULSE(BPM)" />
-            <TextField layoutX="223.0" layoutY="207.0" prefHeight="21.0" prefWidth="130.0" />
+            <TextField layoutX="263.0" layoutY="52.0" prefHeight="21.0" prefWidth="130.0" />
+            <Label font="$x1" layoutX="137.0" layoutY="85.0" text="DIA(mmHg)" />
+            <TextField layoutX="263.0" layoutY="87.0" prefHeight="21.0" prefWidth="130.0" />
+            <Label font="$x1" layoutX="137.0" layoutY="120.0" text="PULSE(BPM)" />
+            <TextField layoutX="263.0" layoutY="121.0" prefHeight="21.0" prefWidth="130.0" />
           </children>
         </AnchorPane>
          </children>

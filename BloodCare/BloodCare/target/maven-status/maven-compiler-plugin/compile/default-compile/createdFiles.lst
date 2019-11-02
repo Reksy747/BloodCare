@@ -2,8 +2,10 @@ com/mycompany/coba/MainApp.class
 com/mycompany/coba/ReController.class
 rekomendasi$1.class
 com/mycompany/coba/Profil_userController.class
+com/mycompany/coba/TekananDarahController.class
 com/mycompany/coba/SignupController.class
 com/mycompany/coba/db_connect.class
+com/mycompany/coba/GulaDarahController.class
 rekomendasi.class
 com/mycompany/coba/SceneController.class
 com/mycompany/coba/DasboardController.class
