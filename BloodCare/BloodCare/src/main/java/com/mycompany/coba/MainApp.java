@@ -1,4 +1,3 @@
-
 package com.mycompany.coba;
 
 import javafx.application.Application;
@@ -9,19 +8,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-
 public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-        
+
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
-        
+
         stage.setTitle("BLOOD CARE");
         stage.setScene(scene);
-       // stage.initStyle(StageStyle.TRANSPARENT);
+        // stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
     }
 
@@ -33,7 +31,7 @@ public class MainApp extends Application {
      *
      * @param args the command line arguments
      */
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         launch(args);
     }
 
