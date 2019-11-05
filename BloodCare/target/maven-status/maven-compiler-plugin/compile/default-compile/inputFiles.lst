@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/SignupController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/UbahPasswordController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/MainApp.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/Profil_userController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/DBUtil.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/SceneController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/GulaDarahController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/TekananDarahController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/DasboardController.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/rekomendasi.java
+/root/Documents/Git Kraken/BloodCare/BloodCare/BloodCare/src/main/java/com/mycompany/coba/ReController.java
+=======
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\rekomendasi.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\SceneController.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\db_connect.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\Profil_userController.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\DasboardController.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\GulaDarahController.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\ReController.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\TekananDarahController.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\MainApp.java
+C:\Users\User\Documents\GitHub\BloodCare\BloodCare\BloodCare\src\main\java\com\mycompany\coba\SignupController.java
+>>>>>>> master
