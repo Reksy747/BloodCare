@@ -50,7 +50,7 @@
          </yAxis>
       </LineChart>
       <Label layoutX="296.0" layoutY="94.0" text="TEKANAN DARAH" />
-      <Label layoutX="296.0" layoutY="318.0" text="TEKANAN DARAH" />
+      <Label layoutX="296.0" layoutY="318.0" text="GULA DARAH" />
       <Line endX="499.0" layoutX="301.0" layoutY="313.0" startX="-100.0" />
    </children>
 </AnchorPane>

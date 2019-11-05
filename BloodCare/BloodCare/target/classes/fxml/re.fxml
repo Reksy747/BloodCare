@@ -44,7 +44,7 @@
       <Button layoutX="490.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#test" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: Red; -fx-text-fill: white;" text="Cek" textAlignment="CENTER" textFill="BLACK" />
           <ScrollPane layoutX="200.0" layoutY="217.0" prefHeight="333.0" prefWidth="599.0">
                <content>
-              <Label fx:id="lbl_label" prefHeight="590.0" prefWidth="581.0" text="" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+              <Label fx:id="lbl_label" alignment="TOP_LEFT" prefHeight="590.0" prefWidth="581.0" text="" textOverrun="WORD_ELLIPSIS" wrapText="true" />
                </content>
           </ScrollPane>
             <TextField fx:id="tekanan" layoutX="303.0" layoutY="148.0" promptText="input tekanan darah" />

@@ -66,7 +66,13 @@ public class SceneController implements Initializable {
         if (rs.next()) {
 
             System.out.println("ada");
-
+            
+            DBUtil.username=rs.getString("username");
+            DBUtil.nama=rs.getString("nama");
+            DBUtil.password=rs.getString("password");
+            DBUtil.tanggalLahir=rs.getString("tanggal");
+            DBUtil.jenisKelamin=rs.getString("gender");
+            
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Dasboard.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/styles/Styles.css");
@@ -86,6 +92,7 @@ public class SceneController implements Initializable {
                 System.out.println("tidak ada");
             }
         }
+        conn.close();
     }
 
     @FXML

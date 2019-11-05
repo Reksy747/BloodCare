@@ -34,105 +34,105 @@ import javax.swing.JOptionPane;
  * @author root
  */
 public class SignupController implements Initializable {
-    
+
     /**
      * Initializes the controller class.
      */
-     @FXML
+    @FXML
     private TextField user_daftar;
-    
+
     @FXML
     private PasswordField pass_daftar;
-    
+
     @FXML
     private TextArea Status;
-    
+
     @FXML
     private DatePicker tanggal_daftar;
     @FXML
     private RadioButton laki;
-    
+
     @FXML
     private RadioButton perempuan;
-    
- /*   @FXML
+
+    @FXML
+    private TextField nama_daftar;
+
+    /*   @FXML
     private TextArea isi;
-    */
-     private  Connection conn = null;
-   
-     @FXML
-    private void Daftar_baru(ActionEvent event) throws SQLException, IOException{
+     */
+    private Connection conn = null;
+
+    @FXML
+    private void Daftar_baru(ActionEvent event) throws SQLException, IOException {
         System.out.println("masuk");
-            
+
         String username_daftar = user_daftar.getText();
+        String name_daftar = nama_daftar.getText();
         String password_daftar = pass_daftar.getText();
         String date = this.tanggal_daftar.getValue().toString();
         String gender;
-        if(laki.isSelected()){
+        if (laki.isSelected()) {
             gender = "Laki-laki";
-        }else{
+        } else {
             gender = "Perempuan";
         }
 //        String tanggallahir_daftar = tanggal_daftar.getText();
 //        db_connect con = new db_connect();
 //       con.connect(username,password);
-String url = "jdbc:sqlite:databaase.db";
- conn = DriverManager.getConnection(url);
-            Statement stmt = conn.createStatement();
-            System.out.println(username_daftar);
-            System.out.println(password_daftar);
-            String query= "INSERT INTO user VALUES ('"+username_daftar+"','"+password_daftar+"','"+date+"','"+gender+"')";
-            System.out.println(query);
+        String url = "jdbc:sqlite:databaase.db";
+        conn = DriverManager.getConnection(url);
+        Statement stmt = conn.createStatement();
+        System.out.println(username_daftar);
+        System.out.println(password_daftar);
+        String query = "INSERT INTO user VALUES ('" + username_daftar + "','" + name_daftar + "','" + password_daftar + "','" + date + "','" + gender + "')";
+        System.out.println(query);
 
-            int rs = stmt.executeUpdate(query);
-            
-            System.out.println("ok");
-            
-            if(rs==1) {
-            
-                System.out.println("data masuk");
-        
-              JOptionPane.showMessageDialog(null,"Data Telah terupdate! ");
-        
-              Parent root=FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-              Scene scene = new Scene(root);
-              scene.getStylesheets().add("/styles/Styles.css");
-       // scene.getStylesheets().add("/styles/Style.css");
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
-         }else{
-                if(username_daftar.equals("")&&(password_daftar.equals(""))){
-                    JOptionPane.showMessageDialog(null,"Masukan username dan password terlebih dahulu! ");
-                }
-               else if(username_daftar.equals("")){
-                    JOptionPane.showMessageDialog(null,"Masukan username terlebih dahulu! ");
-                }
-                else if(password_daftar.equals("")){
-             JOptionPane.showMessageDialog(null,"Masukan password terlebih dahulu! ");
-         }
-                        else{
-                 JOptionPane.showMessageDialog(null,"username atau password salah!");
+        int rs = stmt.executeUpdate(query);
+
+        System.out.println("ok");
+
+        if (rs == 1) {
+
+            System.out.println("data masuk");
+
+            JOptionPane.showMessageDialog(null, "Data Telah terupdate! ");
+
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/styles/Styles.css");
+            // scene.getStylesheets().add("/styles/Style.css");
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } else {
+            if (username_daftar.equals("") && (password_daftar.equals(""))) {
+                JOptionPane.showMessageDialog(null, "Masukan username dan password terlebih dahulu! ");
+            } else if (username_daftar.equals("")) {
+                JOptionPane.showMessageDialog(null, "Masukan username terlebih dahulu! ");
+            } else if (password_daftar.equals("")) {
+                JOptionPane.showMessageDialog(null, "Masukan password terlebih dahulu! ");
+            } else {
+                JOptionPane.showMessageDialog(null, "username atau password salah!");
                 System.out.println("tidak ada");
             }
         }
     }
 
-    
-       @FXML
-    private void kembali_index(ActionEvent event) throws IOException{
-        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+    @FXML
+    private void kembali_index(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         //scene.getStylesheets().add("/styles/Style.css");
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }
