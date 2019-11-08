@@ -47,26 +47,17 @@ public class SceneController implements Initializable {
 
     @FXML
     private void loginButton(ActionEvent event) throws SQLException, IOException {
-        System.out.println("masuk");
 
         String username = user.getText();
         String password = pass.getText();
 //        db_connect con = new db_connect();
 //       con.connect(username,password);
+        String query = "SELECT * FROM user WHERE username = '" + username + "' and password='" + password + "'";
         String url = "jdbc:sqlite:databaase.db";
         conn = DriverManager.getConnection(url);
         Statement stmt = conn.createStatement();
-        System.out.println(username);
-        System.out.println(password);
-        String query = "SELECT * FROM user WHERE username = '" + username + "' and password='" + password + "'";
-        System.out.println(query);
-
         ResultSet rs = stmt.executeQuery(query);
-        System.out.println("3");
         if (rs.next()) {
-
-            System.out.println("ada");
-            
             DBUtil.username=rs.getString("username");
             DBUtil.nama=rs.getString("nama");
             DBUtil.password=rs.getString("password");

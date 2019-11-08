@@ -101,6 +101,16 @@ public class Profil_userController implements Initializable {
         window.show();
     }
     
+    @FXML
+    private void keluar(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         lblUsername.setText(DBUtil.username);

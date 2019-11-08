@@ -53,6 +53,26 @@ public class DasboardController implements Initializable {
         window.setScene(scene);
         window.show();
     }
+    
+    @FXML
+    private void btnCekTekananDarahOnClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TekananDarah.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    
+    @FXML
+    private void btnCekGulaDarahOnClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/GulaDarah.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
 
     /**
      * Initializes the controller class.
