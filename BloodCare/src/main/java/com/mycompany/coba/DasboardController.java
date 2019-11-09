@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
@@ -25,7 +26,7 @@ import javafx.stage.Stage;
 public class DasboardController implements Initializable {
 
     @FXML
-    private void profil (ActionEvent event) throws IOException {
+    private void profil(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/profil_user.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
@@ -33,7 +34,7 @@ public class DasboardController implements Initializable {
         window.setScene(scene);
         window.show();
     }
-            
+
     @FXML
     private void re(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
@@ -53,9 +54,9 @@ public class DasboardController implements Initializable {
         window.setScene(scene);
         window.show();
     }
-    
+
     @FXML
-    private void btnCekTekananDarahOnClick(ActionEvent event) throws IOException{
+    private void btnCekTekananDarahOnClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/TekananDarah.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
@@ -63,9 +64,9 @@ public class DasboardController implements Initializable {
         window.setScene(scene);
         window.show();
     }
-    
+
     @FXML
-    private void btnCekGulaDarahOnClick(ActionEvent event) throws IOException{
+    private void btnCekGulaDarahOnClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/GulaDarah.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
