@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="735.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.mycompany.coba.ReController">
+<!-->>>>>>> master-->
+<!--  </children>
+</AnchorPane>-->
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.coba.ReController">
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0">
       <children>
@@ -32,10 +31,10 @@
                 <Label layoutX="107.0" layoutY="29.0" style="-fx-font-family: 'Roboto', sans-serif; -fx-font-weight: bold;" text="B L O O D C A R E" textFill="WHITE" />
               </children>
             </Pane>
-            <Button layoutY="98.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="HOME" textFill="WHITE" />
+            <Button layoutY="98.0" mnemonicParsing="false" onAction="#home" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="HOME" textFill="WHITE" />
             <Button layoutY="461.0" mnemonicParsing="false" onAction="#keluar" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="LOGOUT" textFill="#f2f2f2" />
-            <Button layoutY="157.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK GULA DARAH" textFill="WHITE" />
-            <Button layoutY="216.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK TEKANAN DARAH" textFill="WHITE" />
+            <Button layoutY="157.0" mnemonicParsing="false" onAction="#btnCekGulaDarahOnClick" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK GULA DARAH" textFill="WHITE" />
+            <Button layoutY="216.0" mnemonicParsing="false" onAction="#btnCekTekananDarahOnClick" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK TEKANAN DARAH" textFill="WHITE" />
             <Button layoutY="275.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="Rekomendasi" textFill="WHITE" />
             <Button layoutY="334.0" mnemonicParsing="false" onAction="#profil" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="My Profil" textFill="WHITE" />
           </children>
@@ -66,6 +65,3 @@
         <TextField fx:id="txtTekananDarah" layoutX="303.0" layoutY="148.0" promptText="input tekanan darah" />
       </children>
     </AnchorPane>
-<!-->>>>>>> master-->
-<!--  </children>
-</AnchorPane>-->

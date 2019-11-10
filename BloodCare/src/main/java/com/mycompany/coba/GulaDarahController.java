@@ -28,6 +28,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
@@ -104,8 +106,12 @@ public class GulaDarahController implements Initializable {
 
     @FXML
     private void btnHapusOnClick(ActionEvent event) {
-        int dialogResult = JOptionPane.showOptionDialog(null, "Anda yakin akan menghapus data ini?", "Konfirmasi Hapus Data Tekanan Darah", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
-        if (dialogResult == JOptionPane.YES_OPTION) {
+//        int dialogResult = JOptionPane.showOptionDialog(null, "Anda yakin akan menghapus data ini?", "Konfirmasi Hapus Data Tekanan Darah", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+//        if (dialogResult == JOptionPane.YES_OPTION) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Anda yakin akan menghapus data ini?", ButtonType.YES, ButtonType.CANCEL);
+        alert.showAndWait();
+
+        if (alert.getResult() == ButtonType.YES) {
             int selectedRowIdx = tableGulaDarah.getSelectionModel().getSelectedIndex();
             TableColumn colId = (TableColumn) tableGulaDarah.getColumns().get(0);
             Integer id = (Integer) colId.getCellObservableValue(selectedRowIdx).getValue();
@@ -122,10 +128,29 @@ public class GulaDarahController implements Initializable {
         }
     }
 
-    @FXML
-    private void keluar(ActionEvent event) {
-    }
-
+//    @FXML
+//    private void keluar(ActionEvent event) {
+//    }
+//
+//    @FXML
+//    private void re(ActionEvent event) throws IOException {
+//        Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
+//        Scene scene = new Scene(root);
+//        scene.getStylesheets().add("/styles/Styles.css");
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        window.setScene(scene);
+//        window.show();
+//    }
+//
+//    @FXML
+//    private void profil(ActionEvent event) throws IOException {
+//        Parent root = FXMLLoader.load(getClass().getResource("/fxml/profil_user.fxml"));
+//        Scene scene = new Scene(root);
+//        scene.getStylesheets().add("/styles/Styles.css");
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        window.setScene(scene);
+//        window.show();
+//    }
     @FXML
     private void re(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
@@ -145,6 +170,46 @@ public class GulaDarahController implements Initializable {
         window.setScene(scene);
         window.show();
     }
+
+    @FXML
+    private void keluar(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+
+    @FXML
+    private void btnCekTekananDarahOnClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TekananDarah.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+
+    @FXML
+    private void btnCekGulaDarahOnClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/GulaDarah.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+     @FXML
+    private void home(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Dasboard.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

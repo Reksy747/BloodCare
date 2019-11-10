@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.mycompany.coba.TekananDarahController">
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.coba.TekananDarahController">
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0">
       <children>
@@ -30,10 +27,10 @@
                 <Label layoutX="107.0" layoutY="29.0" style="-fx-font-family: 'Roboto', sans-serif; -fx-font-weight: bold;" text="B L O O D C A R E" textFill="WHITE" />
               </children>
             </Pane>
-            <Button layoutY="98.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="HOME" textFill="WHITE" />
+            <Button layoutY="98.0" mnemonicParsing="false" onAction="#home" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="HOME" textFill="WHITE" />
             <Button layoutY="461.0" mnemonicParsing="false" onAction="#keluar" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="LOGOUT" textFill="#f2f2f2" />
-            <Button layoutY="157.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK GULA DARAH" textFill="WHITE" />
-            <Button layoutY="216.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK TEKANAN DARAH" textFill="WHITE" />
+            <Button layoutY="157.0" mnemonicParsing="false" onAction="#btnCekGulaDarahOnClick" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK GULA DARAH" textFill="WHITE" />
+            <Button layoutY="216.0" mnemonicParsing="false" onAction="#btnCekTekananDarahOnClick" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="CEK TEKANAN DARAH" textFill="WHITE" />
             <Button layoutY="275.0" mnemonicParsing="false" onAction="#re" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="Rekomendasi" textFill="WHITE" />
             <Button layoutY="334.0" mnemonicParsing="false" onAction="#profil" prefHeight="59.0" prefWidth="200.0" styleClass="button-sidebar" text="My Profil" textFill="WHITE" />
 
@@ -66,11 +63,11 @@
             </Spinner>
             <TableView fx:id="tableTekananDarah" layoutX="101.0" layoutY="191.0" prefHeight="200.0" prefWidth="328.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="ID" fx:id="colId" visible="false" />
-                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Tanggal" fx:id="colTanggal" />
-                <TableColumn prefWidth="75.0" text="Sistol" fx:id="colSistol" />
-                <TableColumn prefWidth="75.0" text="Diastol" fx:id="colDiastol" />
-                <TableColumn prefWidth="75.0" text="Pulse" fx:id="colPulse" />
+                <TableColumn fx:id="colId" prefWidth="75.0" text="ID" visible="false" />
+                <TableColumn fx:id="colTanggal" maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Tanggal" />
+                <TableColumn fx:id="colSistol" prefWidth="75.0" text="Sistol" />
+                <TableColumn fx:id="colDiastol" prefWidth="75.0" text="Diastol" />
+                <TableColumn fx:id="colPulse" prefWidth="75.0" text="Pulse" />
               </columns>
             </TableView>
             <Button id="btnOK" fx:id="btnHapus" layoutX="338.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnHapusOnClick" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Hapus" />

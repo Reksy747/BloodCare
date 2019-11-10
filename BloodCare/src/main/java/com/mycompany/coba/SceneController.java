@@ -17,6 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
@@ -58,12 +60,12 @@ public class SceneController implements Initializable {
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(query);
         if (rs.next()) {
-            DBUtil.username=rs.getString("username");
-            DBUtil.nama=rs.getString("nama");
-            DBUtil.password=rs.getString("password");
-            DBUtil.tanggalLahir=rs.getString("tanggal");
-            DBUtil.jenisKelamin=rs.getString("gender");
-            
+            DBUtil.username = rs.getString("username");
+            DBUtil.nama = rs.getString("nama");
+            DBUtil.password = rs.getString("password");
+            DBUtil.tanggalLahir = rs.getString("tanggal");
+            DBUtil.jenisKelamin = rs.getString("gender");
+
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Dasboard.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/styles/Styles.css");
@@ -73,13 +75,21 @@ public class SceneController implements Initializable {
             window.show();
         } else {
             if (username.equals("") && (password.equals(""))) {
-                JOptionPane.showMessageDialog(null, "Masukan username dan password terlebih dahulu! ");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Masukan username dan password terlebih dahulu! ", ButtonType.YES);
+                alert.showAndWait();
+
             } else if (username.equals("")) {
-                JOptionPane.showMessageDialog(null, "Masukan username terlebih dahulu! ");
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "Masukan username terlebih dahulu! ", ButtonType.YES);
+                alert1.showAndWait();
+
             } else if (password.equals("")) {
-                JOptionPane.showMessageDialog(null, "Masukan password terlebih dahulu! ");
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION, "Masukan password terlebih dahulu! ", ButtonType.YES);
+                alert2.showAndWait();
+
             } else {
-                JOptionPane.showMessageDialog(null, "username atau password salah!");
+                Alert alert3 = new Alert(Alert.AlertType.WARNING, "username atau password salah!", ButtonType.YES);
+                alert3.showAndWait();
+
                 System.out.println("tidak ada");
             }
         }

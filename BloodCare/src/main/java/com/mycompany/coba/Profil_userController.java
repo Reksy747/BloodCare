@@ -18,7 +18,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -80,14 +82,18 @@ public class Profil_userController implements Initializable {
                 DBUtil.nama=nama;
                 lblUsername.setText(username);
                 lblNama.setText(nama);
-                showMessageDialog(null,"Username dan nama berhasil terupdate!");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Username dan nama berhasil terupdate!", ButtonType.YES);
+                        alert.showAndWait();
+                
             }
             catch(SQLException e){
                 showMessageDialog(null,e.getMessage());
             }
         }
         else{
-            showMessageDialog(null,"Username dan nama harus terisi!");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Username dan nama harus terisi!", ButtonType.YES);
+                        alert.showAndWait();
+            
         }
     }
     
@@ -110,6 +116,7 @@ public class Profil_userController implements Initializable {
         window.setScene(scene);
         window.show();
     }
+   
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

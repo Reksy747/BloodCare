@@ -20,6 +20,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
@@ -95,8 +97,8 @@ public class SignupController implements Initializable {
         if (rs == 1) {
 
             System.out.println("data masuk");
-
-            JOptionPane.showMessageDialog(null, "Data Telah terupdate! ");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Data Telah terupdate! ", ButtonType.YES);
+            alert.showAndWait();
 
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
             Scene scene = new Scene(root);
@@ -107,13 +109,21 @@ public class SignupController implements Initializable {
             window.show();
         } else {
             if (username_daftar.equals("") && (password_daftar.equals(""))) {
-                JOptionPane.showMessageDialog(null, "Masukan username dan password terlebih dahulu! ");
+                Alert alert_up = new Alert(Alert.AlertType.INFORMATION, "Masukan username dan password terlebih dahulu! ", ButtonType.YES);
+                alert_up.showAndWait();
+
             } else if (username_daftar.equals("")) {
-                JOptionPane.showMessageDialog(null, "Masukan username terlebih dahulu! ");
+                Alert alert_u = new Alert(Alert.AlertType.INFORMATION, "Masukan username terlebih dahulu! ", ButtonType.YES);
+                alert_u.showAndWait();
+
             } else if (password_daftar.equals("")) {
-                JOptionPane.showMessageDialog(null, "Masukan password terlebih dahulu! ");
+                Alert alert_p = new Alert(Alert.AlertType.INFORMATION, "Masukan password terlebih dahulu! ", ButtonType.YES);
+                alert_p.showAndWait();
+
             } else {
-                JOptionPane.showMessageDialog(null, "username atau password salah!");
+                Alert alert_unk = new Alert(Alert.AlertType.INFORMATION, "username atau password salah!", ButtonType.YES);
+                alert_unk.showAndWait();
+
                 System.out.println("tidak ada");
             }
         }
