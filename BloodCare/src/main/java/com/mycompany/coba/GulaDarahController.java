@@ -51,6 +51,9 @@ public class GulaDarahController implements Initializable {
 
     @FXML
     private TableView tableGulaDarah;
+    
+    @FXML
+    private TableColumn<GulaDarah, Integer> colId;
 
     @FXML
     private TableColumn<GulaDarah, String> colTanggal;
@@ -67,7 +70,7 @@ public class GulaDarahController implements Initializable {
     private void loadData() {
         try {
             ObservableList<GulaDarah> dataGulaDarah = FXCollections.observableArrayList();
-            String sql = "SELECT * FROM gula_darah";
+            String sql = "SELECT * FROM gula_darah WHERE username='"+DBUtil.username+"'";
             Connection con = DBUtil.connect();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
@@ -92,7 +95,7 @@ public class GulaDarahController implements Initializable {
         Date today = new Date();
         SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
         String tglHariIni = dateFormatter.format(today);
-        String sql = "INSERT INTO gula_darah(miligram,milimol,tanggal) VALUES(" + miligram + "," + milimol + ",'" + tglHariIni + "')";
+        String sql = "INSERT INTO gula_darah(miligram,milimol,tanggal,username) VALUES(" + miligram + "," + milimol + ",'" + tglHariIni + "','"+DBUtil.username+"')";
         try {
             Connection con = DBUtil.connect();
             Statement stmt = con.createStatement();
@@ -114,7 +117,7 @@ public class GulaDarahController implements Initializable {
         if (alert.getResult() == ButtonType.YES) {
             int selectedRowIdx = tableGulaDarah.getSelectionModel().getSelectedIndex();
             TableColumn colId = (TableColumn) tableGulaDarah.getColumns().get(0);
-            Integer id = (Integer) colId.getCellObservableValue(selectedRowIdx).getValue();
+            int id = (int) colId.getCellObservableValue(selectedRowIdx).getValue();
             String sql = "DELETE FROM gula_darah WHERE id=" + Integer.toString(id);
             try {
                 Connection con = DBUtil.connect();
@@ -217,7 +220,7 @@ public class GulaDarahController implements Initializable {
         SpinnerValueFactory<Integer> svfMilimol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
         spnMiligram.setValueFactory(svfMiligram);
         spnMilimol.setValueFactory(svfMilimol);
-//        colId.setCellValueFactory(new PropertyValueFactory<GulaDarah, Integer>("id"));
+        colId.setCellValueFactory(new PropertyValueFactory<GulaDarah, Integer>("id"));
         colTanggal.setCellValueFactory(new PropertyValueFactory<GulaDarah, String>("tanggal"));
         colMiligram.setCellValueFactory(new PropertyValueFactory<GulaDarah, Integer>("miligram"));
         colMilimol.setCellValueFactory(new PropertyValueFactory<GulaDarah, Integer>("milimol"));

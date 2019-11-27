@@ -11,4 +11,5 @@ com/mycompany/coba/Profil_userController.class
 com/mycompany/coba/TekananDarahController.class
 com/mycompany/coba/SignupController.class
 rekomendasi.class
+com/mycompany/coba/EditTekananDarahController.class
 com/mycompany/coba/SceneController.class

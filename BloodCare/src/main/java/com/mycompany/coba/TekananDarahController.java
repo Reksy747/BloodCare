@@ -36,6 +36,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.DatePicker;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
@@ -54,6 +55,9 @@ public class TekananDarahController implements Initializable {
 
     @FXML
     private Spinner<Integer> spnPulse;
+    
+    @FXML
+    private DatePicker dpTanggal;
 
     @FXML
     private Button btnOK;
@@ -82,7 +86,7 @@ public class TekananDarahController implements Initializable {
     private void loadData() {
         try {
             ObservableList<TekananDarah> dataTekananDarah = FXCollections.observableArrayList();
-            String sql = "SELECT * FROM tekanan_darah";
+            String sql = "SELECT * FROM tekanan_darah WHERE username='"+DBUtil.username+"'";
             Connection con = DBUtil.connect();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
@@ -106,10 +110,8 @@ public class TekananDarahController implements Initializable {
         String sistol = spnSistol.getEditor().getText();
         String diastol = spnDiastol.getEditor().getText();
         String pulse = spnPulse.getEditor().getText();
-        Date today = new Date();
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
-        String tglHariIni = dateFormatter.format(today);
-        String sql = "INSERT INTO tekanan_darah(sistol,diastol,pulse,tanggal) VALUES(" + sistol + "," + diastol + "," + pulse + ",'" + tglHariIni + "')";
+        String tanggal = dpTanggal.getValue().toString();
+        String sql = "INSERT INTO tekanan_darah(sistol,diastol,pulse,tanggal,username) VALUES(" + sistol + "," + diastol + "," + pulse + ",'" + tanggal + "','"+DBUtil.username+"')";
         try {
             Connection con = DBUtil.connect();
             Statement stmt = con.createStatement();
@@ -121,6 +123,23 @@ public class TekananDarahController implements Initializable {
         }
     }
 
+    @FXML
+    private void btnEditOnClick(ActionEvent event) throws IOException{
+        int selectedRowIdx = tableTekananDarah.getSelectionModel().getSelectedIndex();
+        Integer idTerpilih = (Integer) colId.getCellObservableValue(selectedRowIdx).getValue();
+        String tanggalTerpilih = (String) colTanggal.getCellObservableValue(selectedRowIdx).getValue();
+        Integer sistolTerpilih = (Integer) colSistol.getCellObservableValue(selectedRowIdx).getValue();
+        Integer diastolTerpilih = (Integer) colDiastol.getCellObservableValue(selectedRowIdx).getValue();
+        Integer pulseTerpilih = (Integer) colPulse.getCellObservableValue(selectedRowIdx).getValue();
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/EditTekananDarah.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        EditTekananDarahController editTekananDarahController=root.getController();
+        editTekananDarahController.initData(idTerpilih,tanggalTerpilih,sistolTerpilih,diastolTerpilih,pulseTerpilih);
+        window.show();
+    }
+    
     @FXML
     private void btnHapusOnClick(ActionEvent event) {
 //        int dialogResult=JOptionPane.showOptionDialog(null,"Anda yakin akan menghapus data ini?","Konfirmasi Hapus Data Tekanan Darah",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,null,null);
