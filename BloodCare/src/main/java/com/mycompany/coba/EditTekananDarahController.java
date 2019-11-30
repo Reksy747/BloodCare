@@ -69,6 +69,7 @@ public class EditTekananDarahController implements Initializable {
             con.close();
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/TekananDarah.fxml"));
             Scene scene = new Scene(root);
+            scene.getStylesheets().add("/styles/Styles.css");
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();

@@ -69,7 +69,9 @@ public class RekomendasiTekananController implements Initializable {
         // TODO
     }
     
+    
     public void initData(int sistol,int diastol){
+        
         colDaftarMakanan.setCellValueFactory(new PropertyValueFactory<Makanan,String>("namaMakanan"));
         lblTekananDarah.setText(sistol+"/"+diastol);
         String sql;
@@ -214,4 +216,5 @@ public class RekomendasiTekananController implements Initializable {
         window.setScene(scene);
         window.show();
     }
+
 }

@@ -130,6 +130,7 @@ public class TekananDarahController implements Initializable {
         Integer diastolTerpilih = (Integer) colDiastol.getCellObservableValue(selectedRowIdx).getValue();
         FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/rekomendasiTekanan.fxml"));
         Scene scene = new Scene((Parent)root.load());
+         scene.getStylesheets().add("/styles/Styles.css");
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         RekomendasiTekananController rekomendasiMakananController=root.getController();
