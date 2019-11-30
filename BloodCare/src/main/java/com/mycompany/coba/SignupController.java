@@ -82,9 +82,8 @@ public class SignupController implements Initializable {
 //        String tanggallahir_daftar = tanggal_daftar.getText();
 //        db_connect con = new db_connect();
 //       con.connect(username,password);
-        String url = "jdbc:sqlite:databaase.db";
-        conn = DriverManager.getConnection(url);
-        Statement stmt = conn.createStatement();
+        Connection con=DBUtil.connect();
+        Statement stmt = con.createStatement();
         System.out.println(username_daftar);
         System.out.println(password_daftar);
         String query = "INSERT INTO user VALUES ('" + username_daftar + "','" + name_daftar + "','" + password_daftar + "','" + date + "','" + gender + "')";

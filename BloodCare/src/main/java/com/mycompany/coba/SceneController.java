@@ -55,9 +55,8 @@ public class SceneController implements Initializable {
 //        db_connect con = new db_connect();
 //       con.connect(username,password);
         String query = "SELECT * FROM user WHERE username = '" + username + "' and password='" + password + "'";
-        String url = "jdbc:sqlite:databaase.db";
-        conn = DriverManager.getConnection(url);
-        Statement stmt = conn.createStatement();
+        Connection con=DBUtil.connect();
+        Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(query);
         if (rs.next()) {
             DBUtil.username = rs.getString("username");
@@ -93,7 +92,7 @@ public class SceneController implements Initializable {
                 System.out.println("tidak ada");
             }
         }
-        conn.close();
+        con.close();
     }
 
     @FXML

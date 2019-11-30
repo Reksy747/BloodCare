@@ -35,7 +35,7 @@ public class DBUtil {
     public static String jenisKelamin;
     public static Connection connect(){
         Connection con = null;
-        String url = "jdbc:sqlite:databaase.db";
+        String url = "jdbc:sqlite:blood_care.db";
         try {
             con = DriverManager.getConnection(url);
         }

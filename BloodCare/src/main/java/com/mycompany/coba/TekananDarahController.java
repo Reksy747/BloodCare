@@ -124,6 +124,20 @@ public class TekananDarahController implements Initializable {
     }
 
     @FXML
+    private void btnRekomendasiOnClick(ActionEvent event) throws IOException{
+        int selectedRowIdx = tableTekananDarah.getSelectionModel().getSelectedIndex();
+        Integer sistolTerpilih = (Integer) colSistol.getCellObservableValue(selectedRowIdx).getValue();
+        Integer diastolTerpilih = (Integer) colDiastol.getCellObservableValue(selectedRowIdx).getValue();
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/rekomendasiTekanan.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        RekomendasiTekananController rekomendasiMakananController=root.getController();
+        rekomendasiMakananController.initData(sistolTerpilih,diastolTerpilih);
+        window.show();
+    }
+    
+    @FXML
     private void btnEditOnClick(ActionEvent event) throws IOException{
         int selectedRowIdx = tableTekananDarah.getSelectionModel().getSelectedIndex();
         Integer idTerpilih = (Integer) colId.getCellObservableValue(selectedRowIdx).getValue();
@@ -167,7 +181,7 @@ public class TekananDarahController implements Initializable {
 
     @FXML
     private void re(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/re.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/rekomendasiTekanan.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
