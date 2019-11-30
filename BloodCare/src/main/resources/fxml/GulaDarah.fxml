@@ -64,6 +64,8 @@
               </columns>
             </TableView>
             <Button id="btnOK" fx:id="btnHapus" layoutX="338.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnHapusOnClick" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Hapus" />
+                  <Button id="btnOK" fx:id="btnEdit" layoutX="238.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnEditOnClick" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Edit" />
+                  <Button id="btnRekomendasi" fx:id="btnRekomendasi" layoutX="111.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnRekomendasiOnClick" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="btn-login" text="Rekomendasi" />
           </children>
         </AnchorPane>
       </children>

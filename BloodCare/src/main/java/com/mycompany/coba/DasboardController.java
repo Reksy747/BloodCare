@@ -122,6 +122,33 @@ public class DasboardController implements Initializable {
         grafikTekananDarah.getData().add(pulseChartSeries);
     }
     
+     private void loadGrafikGulaDarah(){
+        XYChart.Series<String,Integer> miligramChartSeries=new XYChart.Series<>();
+        XYChart.Series<String,Integer> milimolChartSeries=new XYChart.Series<>();
+        miligramChartSeries.setName("MG/DL");
+        milimolChartSeries.setName("Mmol/L");
+        try{
+            String sql="SELECT tanggal,miligram,milimol FROM gula_darah WHERE username='"+DBUtil.username+"' ORDER BY tanggal";
+            Connection con = DBUtil.connect();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                String tanggal = rs.getString("tanggal");
+                int miligram = rs.getInt("sistol");
+                int milimol = rs.getInt("diastol");
+                miligramChartSeries.getData().add(new XYChart.Data<>(tanggal,miligram));
+                milimolChartSeries.getData().add(new XYChart.Data<>(tanggal,milimol));
+            }
+            con.close();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        grafikGulaDarah.getData().clear();
+        grafikGulaDarah.getData().add(miligramChartSeries);
+        grafikGulaDarah.getData().add(milimolChartSeries);
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         loadGrafikTekananDarah();

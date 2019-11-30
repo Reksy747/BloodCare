@@ -106,6 +106,22 @@ public class GulaDarahController implements Initializable {
             showMessageDialog(null, e.getMessage());
         }
     }
+    
+      @FXML
+    private void btnEditOnClick(ActionEvent event) throws IOException{
+        int selectedRowIdx = tableGulaDarah.getSelectionModel().getSelectedIndex();
+        Integer idTerpilih = (Integer) colId.getCellObservableValue(selectedRowIdx).getValue();
+        String tanggalTerpilih = (String) colTanggal.getCellObservableValue(selectedRowIdx).getValue();
+        Integer miligramTerpilih = (Integer) colMiligram.getCellObservableValue(selectedRowIdx).getValue();
+        Integer milimolTerpilih = (Integer) colMilimol.getCellObservableValue(selectedRowIdx).getValue();
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/EditGulaDarah.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        EditGulaDarahController editGulaDarahController=root.getController();
+        editGulaDarahController.initData(idTerpilih,tanggalTerpilih,miligramTerpilih,milimolTerpilih);
+        window.show();
+    }
 
     @FXML
     private void btnHapusOnClick(ActionEvent event) {
@@ -183,6 +199,22 @@ public class GulaDarahController implements Initializable {
         window.setScene(scene);
         window.show();
     }
+    
+        @FXML
+    private void btnRekomendasiOnClick(ActionEvent event) throws IOException{
+        int selectedRowIdx = tableGulaDarah.getSelectionModel().getSelectedIndex();
+        Integer miligramTerpilih = (Integer) colMiligram.getCellObservableValue(selectedRowIdx).getValue();
+        Integer milimolTerpilih = (Integer) colMilimol.getCellObservableValue(selectedRowIdx).getValue();
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/rekomendasiTekanan.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+         scene.getStylesheets().add("/styles/Styles.css");
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        RekomendasiTekananController rekomendasiMakananController=root.getController();
+        rekomendasiMakananController.initData(miligramTerpilih,milimolTerpilih);
+        window.show();
+    }
+    
 
     @FXML
     private void btnCekTekananDarahOnClick(ActionEvent event) throws IOException {
@@ -216,8 +248,8 @@ public class GulaDarahController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        SpinnerValueFactory<Integer> svfMiligram = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
-        SpinnerValueFactory<Integer> svfMilimol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
+        SpinnerValueFactory<Integer> svfMiligram = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 120, 0);
+        SpinnerValueFactory<Integer> svfMilimol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 8, 0);
         spnMiligram.setValueFactory(svfMiligram);
         spnMilimol.setValueFactory(svfMilimol);
         colId.setCellValueFactory(new PropertyValueFactory<GulaDarah, Integer>("id"));

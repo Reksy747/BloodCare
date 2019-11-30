@@ -241,9 +241,9 @@ public class TekananDarahController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        SpinnerValueFactory<Integer> svfSistol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
-        SpinnerValueFactory<Integer> svfDiastol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
-        SpinnerValueFactory<Integer> svfPulse = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
+        SpinnerValueFactory<Integer> svfSistol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 120, 0);
+        SpinnerValueFactory<Integer> svfDiastol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 80, 0);
+        SpinnerValueFactory<Integer> svfPulse = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 72, 0);
         spnSistol.setValueFactory(svfSistol);
         spnDiastol.setValueFactory(svfDiastol);
         spnPulse.setValueFactory(svfPulse);

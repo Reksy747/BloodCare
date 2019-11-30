@@ -33,19 +33,16 @@ import static javax.swing.JOptionPane.showMessageDialog;
  *
  * @author root
  */
-public class EditTekananDarahController implements Initializable {
+public class EditGulaDarahController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
     @FXML
-    private Spinner<Integer> spnSistol;
+    private Spinner<Integer> spnMiligram;
 
     @FXML
-    private Spinner<Integer> spnDiastol;
-
-    @FXML
-    private Spinner<Integer> spnPulse;
+    private Spinner<Integer> spnMilimol;
     
     @FXML
     private DatePicker dpTanggal;
@@ -57,17 +54,16 @@ public class EditTekananDarahController implements Initializable {
     
     @FXML
     private void btnOKOnClick(ActionEvent event) throws IOException{
-        String sistol = spnSistol.getEditor().getText();
-        String diastol = spnDiastol.getEditor().getText();
-        String pulse = spnPulse.getEditor().getText();
+        String miligram = spnMiligram.getEditor().getText();
+        String milimol = spnMilimol.getEditor().getText();
         String tanggal = dpTanggal.getValue().toString();
-        String sql = "UPDATE tekanan_darah SET sistol="+sistol+",diastol="+diastol+",pulse="+pulse+",tanggal='"+tanggal+"' WHERE id="+idData;
+        String sql = "UPDATE gula_darah SET miligram="+miligram+"milimol="+milimol +",tanggal='"+tanggal+"' WHERE id="+idData;
         try {
             Connection con = DBUtil.connect();
             Statement stmt = con.createStatement();
             stmt.executeUpdate(sql);
             con.close();
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/TekananDarah.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/GulaDarah.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/styles/Styles.css");
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -78,17 +74,14 @@ public class EditTekananDarahController implements Initializable {
         }
     }
     
-    public void initData(Integer idTerpilih,String tanggalTerpilih,int sistolTerpilih,int diastolTerpilih,int pulseTerpilih){
-        SpinnerValueFactory<Integer> svfSistol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
-        SpinnerValueFactory<Integer> svfDiastol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
-        SpinnerValueFactory<Integer> svfPulse = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
-        spnSistol.setValueFactory(svfSistol);
-        spnDiastol.setValueFactory(svfDiastol);
-        spnPulse.setValueFactory(svfPulse);
+    public void initData(Integer idTerpilih,String tanggalTerpilih,int miligramTerpilih,int milimolTerpilih){
+        SpinnerValueFactory<Integer> svfMiligram = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
+        SpinnerValueFactory<Integer> svfMilimol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
+        spnMiligram.setValueFactory(svfMiligram);
+        spnMilimol.setValueFactory(svfMilimol);
         this.idData=idTerpilih;
-        spnSistol.getValueFactory().setValue(sistolTerpilih);
-        spnDiastol.getValueFactory().setValue(diastolTerpilih);
-        spnPulse.getValueFactory().setValue(pulseTerpilih);
+        spnMiligram.getValueFactory().setValue(miligramTerpilih);
+        spnMiligram.getValueFactory().setValue(milimolTerpilih);
         DateTimeFormatter dtf=DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate tanggalTerpilihLocalDate=LocalDate.parse(tanggalTerpilih,dtf);
         dpTanggal.setValue(tanggalTerpilihLocalDate);
@@ -98,9 +91,5 @@ public class EditTekananDarahController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    void initData(Integer idTerpilih, String tanggalTerpilih, Integer miligramTerpilih, Integer milimolTerpilih) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }
