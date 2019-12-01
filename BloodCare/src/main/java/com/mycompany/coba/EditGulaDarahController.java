@@ -5,7 +5,6 @@ package com.mycompany.coba;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -43,21 +42,21 @@ public class EditGulaDarahController implements Initializable {
 
     @FXML
     private Spinner<Integer> spnMilimol;
-    
+
     @FXML
     private DatePicker dpTanggal;
 
     @FXML
     private Button btnOK;
-    
+
     private Integer idData;
-    
+
     @FXML
-    private void btnOKOnClick(ActionEvent event) throws IOException{
+    private void btnOKOnClick(ActionEvent event) throws IOException {
         String miligram = spnMiligram.getEditor().getText();
         String milimol = spnMilimol.getEditor().getText();
         String tanggal = dpTanggal.getValue().toString();
-        String sql = "UPDATE gula_darah SET miligram="+miligram+"milimol="+milimol +",tanggal='"+tanggal+"' WHERE id="+idData;
+        String sql = "UPDATE gula_darah SET miligram=" + miligram + ",milimol=" + milimol + ",tanggal='" + tanggal + "' WHERE id=" + idData;
         try {
             Connection con = DBUtil.connect();
             Statement stmt = con.createStatement();
@@ -73,23 +72,23 @@ public class EditGulaDarahController implements Initializable {
             showMessageDialog(null, e.getMessage());
         }
     }
-    
-    public void initData(Integer idTerpilih,String tanggalTerpilih,int miligramTerpilih,int milimolTerpilih){
+
+    public void initData(Integer idTerpilih, String tanggalTerpilih, int miligramTerpilih, int milimolTerpilih) {
         SpinnerValueFactory<Integer> svfMiligram = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
         SpinnerValueFactory<Integer> svfMilimol = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 800, 0);
         spnMiligram.setValueFactory(svfMiligram);
         spnMilimol.setValueFactory(svfMilimol);
-        this.idData=idTerpilih;
+        this.idData = idTerpilih;
         spnMiligram.getValueFactory().setValue(miligramTerpilih);
-        spnMiligram.getValueFactory().setValue(milimolTerpilih);
-        DateTimeFormatter dtf=DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate tanggalTerpilihLocalDate=LocalDate.parse(tanggalTerpilih,dtf);
+        spnMilimol.getValueFactory().setValue(milimolTerpilih);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate tanggalTerpilihLocalDate = LocalDate.parse(tanggalTerpilih, dtf);
         dpTanggal.setValue(tanggalTerpilihLocalDate);
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

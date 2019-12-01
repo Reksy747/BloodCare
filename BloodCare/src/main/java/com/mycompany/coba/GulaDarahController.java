@@ -118,7 +118,7 @@ public class GulaDarahController implements Initializable {
         Scene scene = new Scene((Parent)root.load());
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        EditGulaDarahController editGulaDarahController=root.getController();
+        EditGulaDarahController editGulaDarahController = root.getController();
         editGulaDarahController.initData(idTerpilih,tanggalTerpilih,miligramTerpilih,milimolTerpilih);
         window.show();
     }

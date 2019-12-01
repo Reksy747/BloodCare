@@ -19,7 +19,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
@@ -152,6 +151,7 @@ public class DasboardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         loadGrafikTekananDarah();
+        loadGrafikGulaDarah();
     }
 
 }
